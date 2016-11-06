@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <!-- Bootstrap Core CSS -->
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/bootstrap.css" rel="stylesheet">
+    <link href="~/Content/font.css" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+
+    <!-- Theme CSS -->
+    <link href="~/Content/freelancer.min.css" rel="stylesheet">
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Z-Market", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav" style="font-weight:bold;">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">File<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Customers", "Index", "Customers")</li>
+                            <li>@Html.ActionLink("Document Types", "Index", "DocumentTypes")</li>
+                            <li>@Html.ActionLink("Employees", "Index", "Employees")</li>
+                            <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                            <li>@Html.ActionLink("Suppliers", "Index", "Suppliers")</li>
+                            <li>@Html.ActionLink("Users", "Index", "Users")</li>
+                            <li>@Html.ActionLink("Ajax", "Index", "AJAXConcept")</li>
+                            <li>@Html.ActionLink("AjaxCategories", "Index", "Categories")</li>
+                        </ul>    
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Operations<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Orders", "NewOrder", "Orders")</li>
+                            @*<li>@Html.ActionLink("Document Types", "Index", "DocumentTypes")</li>
+                            <li>@Html.ActionLink("Employees", "Index", "Employees")</li>
+                            <li>@Html.ActionLink("Products", "Index", "Products")</li>
+                            <li>@Html.ActionLink("Suppliers", "Index", "Suppliers")</li>*@
+                        </ul>
+                    </li>  
+                </ul>
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer class="text-center">
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+
+            <!-- Footer -->
+            
+                <div class="footer-above">
+                    <div class="container">
+                        <div class="row">
+                            <div class="footer-col col-md-4">
+                                <h3>Location</h3>
+                                <p>
+                                    3481 Melrose Place
+                                    <br>Beverly Hills, CA 90210
+                                </p>
+                            </div>
+                            <div class="footer-col col-md-4">
+                                <h3>Around the Web</h3>
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#" class="btn-social btn-outline"><i class="fa fa-facebook" aria-hidden="true"></i>
+                                        @*<i class="fa fa-fw fa-facebook"></i>*@</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-google-plus"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-twitter"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-linkedin"></i></a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="btn-social btn-outline"><i class="fa fa-fw fa-dribbble"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer-col col-md-4">
+                                <h3>About Freelancer</h3>
+                                <p>Freelance is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-below">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                Copyright &copy; Your Website 2016
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            
+
+
+
+        </footer>
+        
+    </div>  
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>
